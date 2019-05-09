@@ -213,10 +213,6 @@ function cursorColor() {
   document.getElementById("cursor-dot").setAttribute("style", `background-color: ${hexToRgba(c1, 1.0)};`)
 }
 
-function flickityButtonColor() {
-  document.getElementsByClassName("flickity-prev-next-button").setAttribute("style", `background-color: ${c2};`)
-}
-
 function footer() {
   document.getElementById("footer").setAttribute("style", `background-color: ${c1};`)
 }
@@ -234,5 +230,5 @@ function footer() {
   });
 })();
 
-document.onload = randomBackgroundOnLoad(), homeHeaderGradient(), cursorColor(), footer(), flickityButtonColor();
+document.onload = randomBackgroundOnLoad(), homeHeaderGradient(), cursorColor(), footer();
 });
