@@ -165,7 +165,9 @@ var cursor = {
   }
 }
 
+if (isMobile == false) {
 cursor.init();
+}
 
 //Color gradient stuff
 fetch('https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json').then(r => r.json()).then(function (fetched) {
