@@ -6,6 +6,35 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 }
 
 
+//* Inefficient loading screen stuff. Feel free to create a pull request to fix it
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+var loaderDelay;
+var showPage;
+function loader() {
+  document.getElementsByTagName('body')[0].setAttribute("style", "overflow: hidden;")
+  loaderDelay = setTimeout(loaderFadeOut, 300);
+}
+function loaderFadeOut() {
+  $('#loader')
+    .fadeIn(0)
+    .fadeTo(500, 0)
+  showPage = setTimeout(revealPage, 500)
+}
+function revealPage() {
+  document.getElementById("loader").style.display = "none";
+  revealMobileFix()
+}
+function revealMobileFix() {
+  if (isMobile == false) {
+    document.getElementsByTagName('body')[0].setAttribute("style", "overflow-x: hidden;")
+  } else {
+    document.getElementsByTagName('body')[0].setAttribute("style", "")
+  }
+}
+
+
 //* Flickity .main-gallery
 var flkty = new Flickity('.main-gallery', {
   cellAlign: 'left',
@@ -164,11 +193,13 @@ var cursor = {
     }
   }
 }
+
+//* Mobile toggles
 if (isMobile == false) {
+  document.getElementById('mobileInsert1').innerHTML = `<div class="image"><a href="https://docs.wixstatic.com/ugd/95f27c_72a48d50ec884b488dbb6e6f07ff9c1d.pdf" target="_blank" style="font-weight: bold; text-decoration: none; color: inherit;"><img class="img-responsive" src="media/charms.png" style="transform: scale(0.7);"></a></div>`;
+  document.getElementById('mobileInsert2').innerHTML = `<div class="image"><a href="https://docs.wixstatic.com/ugd/95f27c_3d99b0a15db34dd6a0f3a648342f27e0.pdf" target="_blank" style="text-decoration: none; color: inherit;"><img class="img-responsive" src="media/remind.png" style="transform: scale(0.7);"></a></div>`;
+  document.getElementById('mobileInsert3').innerHTML = `<div class="image"><a href="#home" style="text-decoration: none; color: inherit;"><img class="img-responsive" src="media/calendar.png" style="transform: scale(0.7);"></a></div>`;
   cursor.init();
-  document.getElementsByTagName('body')[0].setAttribute("style", "overflow-x: hidden;")
-} else {
-  document.getElementsByTagName('body')[0].setAttribute("style", "")
 }
 
 

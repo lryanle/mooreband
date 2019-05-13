@@ -18,11 +18,62 @@
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.min.css'>
   <link rel="stylesheet" href="css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97566551-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97566551-3');
+  </script>
 
 
 </head>
 
-<body>
+<body onload="loader()">
+  <div id="loader">
+    <div class="logo-loader">
+      <span>
+        <svg viewBox="0 0 720 452" transform="translate(0, -5)">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0">
+              <stop offset="0%" style="stop-color:#3ca0ff;" />
+              <stop offset="50%" style="stop-color:#283c8c;" />
+              <stop offset="100%" style="stop-color:#3ca0ff;" />
+            </linearGradient>
+            <!----><pattern id="pattern" x="0" y="0" width="300%" height="100%" patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="150%" height="100%" fill="url(#gradient)">
+                <animate attributeType="XML" attributeName="x" from="0" to="150%" dur="1.5s" repeatCount="indefinite" />
+              </rect>
+              <rect x="-150%" y="0" width="150%" height="100%" fill="url(#gradient)">
+                <animate attributeType="XML" attributeName="x" from="-150%" to="0" dur="1.5s"
+                  repeatCount="indefinite" />
+              </rect>
+            </pattern>
+            <style>
+              .cls-2 {
+                fill: url(#pattern);
+              }
+
+              .cls-1 {
+                fill: #fff;
+              }
+            </style>
+          </defs>
+          <g>
+            <polyline class="cls-2" fill="url(#pattern)" points="270,308 331,198.5 351,291.9 423,189 414,279 504,261 504,198.2 476,203.8 486,0 380,169 361,17 234,252.2 216,255.8 216,319" stroke="#d5e5e5" stroke-width="2"
+            stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+            <polyline class="cls-2" fill="url(#pattern)" points="0,452 720,308 720,245 0,389" stroke="#d5e5e5" stroke-width="2"
+            stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+            <polyline class="cls-2" fill="url(#pattern)" points="540,254 720,218 720,155 540,191" stroke="#d5e5e5" stroke-width="2"
+            stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+            <polyline class="cls-2" fill="url(#pattern)" points="180,263 0,299 0,362 180,326" stroke="#d5e5e5" stroke-width="2"
+            stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+          </g>
+        </svg>
+      </span>
+    </div>
+  </div>
       <div class="image-wrap">
         <div class="regular" id="headerbg"></div>
       </div>
@@ -94,12 +145,45 @@
               </div>
               <div class="col-lg-6">
                 <div class="image">
-                  <img class="img-responsive" src="media/focused.png" alt="img03">
+                  <img class="img-responsive" src="media/focused.png">
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <section id="connections" class="section-intro section-white">
+            <div class="container">
+              <div class="row">
+                  <div class="col-lg-2" id="mobileInsert1">
+                    </div>
+                    <div class="col-lg-2" id="mobileInsert2">
+                    </div>
+                    <div class="col-lg-2" id="mobileInsert3">
+                    </div>
+                <div class="col-lg-6">
+                  <h3>Get Connected</h3>
+                  <p class="section-paragraph">Staying connected is an essential part of band. It is required and expected for every student or parent to join the <a href="https://docs.wixstatic.com/ugd/95f27c_3d99b0a15db34dd6a0f3a648342f27e0.pdf" style="font-style: italic; text-decoration: none; color: inherit;">Remind</a>. Payments, band fees, and dues can be paid through Charms. For more information regarding Charms, check the <a href="#home" style="font-style: italic; text-decoration: none; color: inherit;">info tab</a> or click <a target="_blank" href="https://docs.wixstatic.com/ugd/95f27c_72a48d50ec884b488dbb6e6f07ff9c1d.pdf" style="font-style: italic; text-decoration: none; color: inherit;">here</a>. Don't forget to stay up to date regulary with the <a href="#home" style="font-style: italic; text-decoration: none; color: inherit;">calendar</a>. It will be kept up to date with upcoming concerts, contests, events, and other happenings. </br>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" class="section-intro section-grey">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h3>Latest Announcement</h3>
+                    <p class="section-paragraph">Important Upcoming Dates:</br>5/17: Band Banquet</br>5/20: Second marching clinic</br>5/23: Marching band auditions</br>5/24: First band fees due</br>5/25: Graduation</br>7/22-7/9: Band camps  </br></br></br>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="image">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
         <section id="gallery" class="section-white gallery" style="padding-bottom: 125px;">
           <div class="container-fluid">
