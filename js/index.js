@@ -166,6 +166,9 @@ var cursor = {
 }
 if (isMobile == false) {
   cursor.init();
+  document.getElementsByTagName('body')[0].setAttribute("style", "overflow-x: hidden;")
+} else {
+  document.getElementsByTagName('body')[0].setAttribute("style", "")
 }
 
 
