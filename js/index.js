@@ -7,32 +7,7 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 
 
 //* Inefficient loading screen stuff. Feel free to create a pull request to fix it
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}
-var loaderDelay;
-var showPage;
-function loader() {
-  document.getElementsByTagName('body')[0].setAttribute("style", "overflow: hidden;")
-  loaderDelay = setTimeout(loaderFadeOut, 300);
-}
-function loaderFadeOut() {
-  $('#loader')
-    .fadeIn(0)
-    .fadeTo(500, 0)
-  showPage = setTimeout(revealPage, 500)
-}
-function revealPage() {
-  document.getElementById("loader").style.display = "none";
-  revealMobileFix()
-}
-function revealMobileFix() {
-  if (isMobile == false) {
-    document.getElementsByTagName('body')[0].setAttribute("style", "overflow-x: hidden;")
-  } else {
-    document.getElementsByTagName('body')[0].setAttribute("style", "")
-  }
-}
+
 
 
 //* Flickity .main-gallery
