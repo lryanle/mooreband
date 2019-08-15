@@ -174,7 +174,7 @@ if (isMobile == false) {
   document.getElementById('mobileInsert1').innerHTML = `<div class="image"><a href="https://docs.wixstatic.com/ugd/95f27c_72a48d50ec884b488dbb6e6f07ff9c1d.pdf" target="_blank" style="font-weight: bold; text-decoration: none; color: inherit;"><img class="img-responsive" src="media/charms.png" style="transform: scale(0.7);"></a></div>`;
   document.getElementById('mobileInsert2').innerHTML = `<div class="image"><a href="https://docs.wixstatic.com/ugd/95f27c_3d99b0a15db34dd6a0f3a648342f27e0.pdf" target="_blank" style="text-decoration: none; color: inherit;"><img class="img-responsive" src="media/remind.png" style="transform: scale(0.7);"></a></div>`;
   document.getElementById('mobileInsert3').innerHTML = `<div class="image"><a href="#home" style="text-decoration: none; color: inherit;"><img class="img-responsive" src="media/calendar.png" style="transform: scale(0.7);"></a></div>`;
-  cursor.init();
+  /*cursor.init(); --Deprecated*/
 }
 
 
@@ -313,4 +313,4 @@ function mobileCompat() {
 }
 
 
-document.onload = randomBackgroundOnLoad(), cursorColor(), homeHeaderGradient(), footer();
+document.onload = randomBackgroundOnLoad(), /*cursorColor() --Deprecated,*/ homeHeaderGradient(), footer();

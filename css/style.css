@@ -4,7 +4,27 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  cursor: none !important;
+  /*cursor: none !important; --Deprecated*/
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+	background-color: rgb(150, 150, 150);
+	background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent)
 }
 
 h1 {
@@ -49,7 +69,8 @@ body, .btn {
   font-family: "Lato", Helvetica, Verdana, sans-serif;
   font-weight: 400;
   font-size: 1.6875rem;
-  cursor: none;
+  /*cursor: none;*/
+  overflow-x: hidden;
 }
 
 .btn {
@@ -203,6 +224,13 @@ section {
   padding: 50px 0;
 }
 
+#achievements {
+  font-weight: bold;
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: 350;
+}
+
 .gallery .filter {
   list-style: none;
   padding: 0;
@@ -262,7 +290,7 @@ section {
 .cs-style-3 figure figcaption {
   position: absolute;
   padding: 10px 20px;
-  background: linear-gradient(10deg, rgba(36, 104, 188, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(25deg, rgba(36, 104, 188, 0.65) 0%, rgba(0, 0, 0, 0.0) 70%);
   height: 50px;
   width: 100%;
   opacity: 0;
@@ -435,10 +463,56 @@ section {
 footer {
 
   color: white;
-  height: 50px;
+
 }
 footer p {
   margin-top: 1rem;
+  text-align: center;
+}
+
+.social-area .btn-social {
+  margin: 0 10px;
+}
+
+.btn-social.btn-round {
+  padding: 9px 10px;
+}
+
+.btn-social {
+  color: white;
+}
+
+.btn-social {
+  opacity: 0.85;
+  padding: 8px 9px;
+  font-size: 29px;
+}
+
+.btn-social .fa {
+  font-size: 24px;
+  vertical-align: middle;
+  display: inline-block;
+
+}
+
+.btn-social.btn-simple {
+  padding: 9px 5px;
+  font-size: 16px;
+}
+
+.btn-social.btn-simple .fa {
+  font-size: 20px;
+  position: relative;
+  top: -2px;
+  width: 24px;
+}
+
+.btn-round {
+  border-width: 1px;
+  border-radius: 30px !important;
+  border-color: #888888;
+  border: 1px solid transparent;
+  display: inline-block;
 }
 
 /*cursor*/
