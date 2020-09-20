@@ -11,14 +11,12 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 
 
 //* Flickity .main-gallery
-if (document.URL.indexOf("index.html") > -1) {
   var flkty = new Flickity('.main-gallery', {
     cellAlign: 'left',
     wrapAround: true,
     prevNextButtons: true,
     autoPlay: 5000
   });
-}
 
 //* hex to rgba
 function hexToRgba(hex, alpha) {
